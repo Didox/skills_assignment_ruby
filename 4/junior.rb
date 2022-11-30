@@ -1,10 +1,10 @@
 class Action
-    def initialize(tipo)
-      @tipo = tipo
+    def initialize(type)
+      @type = type
     end
     
     def call
-        case @tipo
+        case @type
         when  "TIPO1"
             puts "Executa ação TIPO1"
         when "TIPO2"
