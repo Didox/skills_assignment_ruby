@@ -26,12 +26,12 @@ class SubjectImpl < Subject
     end
   
     def notify(template)
-      @observers.each { |observer| observer.send(self, template) }
+      @observers.each { |observer| observer.send(template) }
     end
 end
 
 class Observer
-    def send(subject_impl, template)
+    def send(template)
         raise NotImplementedError, "#{self.class} has not implemented method '#{__method__}'"
     end
 end
@@ -41,7 +41,7 @@ class UserObserverEmail < Observer
         @user = user
     end
 
-    def send(subject, template)
+    def send(template)
         template = "===========[EMAIL - #{@user.email}]=============\n#{template}\n\n\n"
         template = template.gsub("{{name}}", @user.name)
         puts template
@@ -53,7 +53,7 @@ class UserObserverSMS < Observer
         @user = user
     end
 
-    def send(subject, template)
+    def send(template)
         template = "===========[SMS - #{@user.tel}]=============\n#{template}\n\n\n"
         template = template.gsub("{{name}}", @user.name)
         puts template
