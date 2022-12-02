@@ -1,0 +1,1 @@
+# padrão rails com particularidades para produção

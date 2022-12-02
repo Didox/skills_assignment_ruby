@@ -1,0 +1,1 @@
+# Jbuilder do modelo

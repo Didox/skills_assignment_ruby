@@ -1,0 +1,1 @@
+# um template customizado para jbuilder

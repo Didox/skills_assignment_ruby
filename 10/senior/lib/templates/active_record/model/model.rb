@@ -1,0 +1,1 @@
+# um template customizado para models no rails

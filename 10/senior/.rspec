@@ -1,0 +1,3 @@
+# config rspec
+--color
+--require spec_helper
